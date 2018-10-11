@@ -1,0 +1,10 @@
+*.pkl
+*.npy
+*.pkl
+model*/
+logs*/
+plots/
+*.ckpt
+*.pyc
+*.txt
+
