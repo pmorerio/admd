@@ -9,7 +9,10 @@ import sys
 sys.path.append('./FCRN-DepthPrediction/tensorflow')
 
 import models
-
+#~ from tifffile import imsave
+#~ from scipy.misc import imsave
+#~ from libtiff import TIFF
+import cv2
 
 def predict(model_data_path, image_dir):
     
@@ -38,7 +41,7 @@ def predict(model_data_path, image_dir):
 	n_samples = {'train':2186, 'test':2401}
 	
 	for split in splits:
-	    print(split)
+	    print('[*] '+split)
 	    
 	    rgb_classes = sorted(glob.glob(image_dir + '/' + split + '/images/*') )
 
@@ -66,14 +69,30 @@ def predict(model_data_path, image_dir):
 		    
 		    # Evalute the network for the given image
 		    pred  = sess.run(net.get_output(), feed_dict={input_node:img})
+		    pred = np.squeeze(pred, axis=0)
+		    max_val = np.max(pred)
+		    min_val = np.min(pred)
+		    pred = (pred - min_val)*255. / (max_val - min_val)
+		    pred = cv2.applyColorMap(pred.astype('uint8'), cv2.COLORMAP_JET)
+		    cv2.imwrite(os.path.join(save_dir, image_name), pred)
 		    
-		    np.save(os.path.join(save_dir, image_name), np.squeeze(pred))
+		    
+		    #~ tiff = TIFF.open(os.path.join(save_dir, image_name), mode='w')
+		    #~ tiff.write_image(pred)
+		    #~ tiff.close()
+		    
+		    #~ imsave(os.path.join(save_dir, image_name), pred)
+		    #~ pred = Image.fromarray(pred.astype('uint16'), mode='I')
+		    #~ print(pred)
+		    #~ pred.save(os.path.join(save_dir, image_name + '.png'), bits=16)
+		    #~ imsave(os.path.join(save_dir, image_name + '.png'))
+		    #~ np.save(os.path.join(save_dir, image_name), np.squeeze(pred))
 		    
 		    #~ fig = plt.figure()
-		    #~ ii = plt.imshow(pred[0,:,:,0], interpolation='nearest')
+		    #~ ii = plt.imshow(pred)
 		    #~ fig.colorbar(ii)
 		    #~ plt.show()
-
+		    #~ return 0
 		    c+=1
 		    
 		l+=1
