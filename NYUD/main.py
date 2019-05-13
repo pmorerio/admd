@@ -7,7 +7,7 @@ flags.DEFINE_string('mode', 'None', "'train_rgb', 'train_depth', 'train_double_s
 flags.DEFINE_string('bs', '32', "batch size")
 flags.DEFINE_string('lr', '0.0001', "learning rate")
 flags.DEFINE_string('it', '2000', "training iterations")
-flags.DEFINE_string('noise', '0', "training iterations")
+flags.DEFINE_string('noise', '0', "test-time noise")
 FLAGS = flags.FLAGS
 
 

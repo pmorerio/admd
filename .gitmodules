@@ -1,0 +1,3 @@
+[submodule "NYUD/FCRN-DepthPrediction"]
+	path = NYUD/FCRN-DepthPrediction
+	url = git@github.com:pmorerio/FCRN-DepthPrediction.git
