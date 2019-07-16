@@ -1,5 +1,6 @@
 ## Code for the paper 'Learning with privileged information via adversarial discriminative modality distillation'
-[https://arxiv.org/abs/1810.08437](https://arxiv.org/abs/1810.08437)
+
+[PDF](https://arxiv.org/abs/1810.08437)
 
 Clone recursively to get also FCRN depth prediction code.
 
@@ -12,7 +13,8 @@ If you use this code as part of your research please cite
 @article{garcia2018admd,
   title={Learning with privileged information via adversarial discriminative modality distillation},
   author={Garcia, Nuno and Morerio, Pietro and Murino, Vittorio},
-  journal={https://arxiv.org/abs/1810.08437},
-  year={2018}
+  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  url={https://arxiv.org/abs/1810.08437},
+  year={2019}
 }
 ```
