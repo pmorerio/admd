@@ -14,7 +14,6 @@ If you use this code as part of your research please cite
   title={Learning with privileged information via adversarial discriminative modality distillation},
   author={Garcia, Nuno and Morerio, Pietro and Murino, Vittorio},
   journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
-  url={https://arxiv.org/abs/1810.08437},
   year={2019}
 }
 ```
