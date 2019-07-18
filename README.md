@@ -1,6 +1,6 @@
 ## Code for the paper 'Learning with privileged information via adversarial discriminative modality distillation'
 
-[PDF](https://arxiv.org/abs/1810.08437)
+[arXiv](https://arxiv.org/abs/1810.08437) [IEEEXplore](https://ieeexplore.ieee.org/document/8764498)
 
 Clone recursively to get also FCRN depth prediction code.
 
