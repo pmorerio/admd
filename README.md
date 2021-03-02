@@ -10,7 +10,7 @@ git clone --recursive https://github.com/pmorerio/admd.git
 
 If you use this code as part of your research please cite
 ```
-@article{garcia2018admd,
+@article{garcia2020admd,
   title={Learning with privileged information via adversarial discriminative modality distillation},
   author={Garcia, Nuno and Morerio, Pietro and Murino, Vittorio},
   journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
